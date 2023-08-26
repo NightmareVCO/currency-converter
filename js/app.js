@@ -51,7 +51,7 @@ function getSymbol(currencyID) {
 // Event Listeners functions
 function checkForm(event) {
 
-   if (currencyInput.value == "0")
+   if (currencyInput.value == "")
    {
       currencyInput.focus();
       event.preventDefault();
