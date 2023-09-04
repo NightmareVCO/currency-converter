@@ -1,71 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Money Converter</title>
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap"
-			rel="stylesheet" />
-		<!-- Icon -->
-		<link rel="icon" type="image/x-icon" href="images/favicon.ico.png" />
-		<!-- CSS -->
-		<link rel="stylesheet" href="css/reset.css" />
-		<link rel="stylesheet" href="css/style.css" />
-		<!-- JS -->
-		<script src="js/app.js" defer></script>
-	</head>
-	<body>
-		<!-- Header -->
-		<header>
-			<img src="images/logo.png" alt="Logo de Money Converter" />
-		</header>
-		<!-- Main -->
-		<main>
-			<div>
-				<p id="error"></p>
-			</div>
-			<form action="#" id="converterForm">
-				<div class="itemform">
-					<label for="coin" class="sr-only">rd-peso</label>
-					<label for="amount">Enter the amount*</label>
-					<input
-						type="number"
-						name="amount"
-						id="amount"
-						placeholder="100.00"
-						min="1"
-						max="10000000"
-						step="0.01"
-						required />
-					<input type="text" name="coin" value="RD$" id="coin" readonly />
-				</div>
-				<div class="itemform">
-					<label for="currency">Select the currency*</label>
-					<select name="currency" id="currency">
-						<option value="">--Select the currency--</option>
-						<option value="1">Dollar</option>
-						<option value="2">Euro</option>
-						<option value="3">Mexican Peso</option>
-					</select>
-				</div>
-				<div>
-					<label for="result">The result is:</label>
-					<input type="text" name="result" id="result" readonly />
-				</div>
-				<div>
-					<p>* Required</p>
-				</div>
-				<div class="itemform">
-					<input type="submit" value="Convert" id="convert" />
-				</div>
-			</form>
-		</main>
 
-		<!-- Footer -->
-		<footer></footer>
-	</body>
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Money Converter</title>
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet" />
+   <!-- Icon -->
+   <link rel="icon" type="image/x-icon" href="images/favicon.ico.png" />
+   <!-- CSS -->
+   <link rel="stylesheet" href="css/reset.css" />
+   <link rel="stylesheet" href="css/style.css" />
+   <!-- JS -->
+   <script src="js/app.js" defer></script>
+</head>
+
+<body>
+   <!-- Header -->
+   <header>
+      <img src="images/logo.png" alt="Logo de Money Converter" />
+   </header>
+   <!-- Main -->
+   <main>
+      <div>
+         <p id="error"></p>
+      </div>
+      <form action="#" id="converterForm">
+         <div class="itemform">
+            <label for="coin" class="sr-only">rd-peso</label>
+            <label for="amount">Enter the amount*</label>
+            <input type="number" name="amount" id="amount" placeholder="100.00" min="1" max="10000000" step="0.01" required />
+            <input type="text" name="coin" value="RD$" id="coin" readonly />
+         </div>
+         <div class="itemform">
+            <label for="currency">Select the currency*</label>
+            <select name="currency" id="currency">
+               <option value="">--Select the currency--</option>
+               <option value="1">Dollar</option>
+               <option value="2">Euro</option>
+               <option value="3">Mexican Peso</option>
+            </select>
+         </div>
+         <div>
+            <label for="result">The result is:</label>
+            <input type="text" name="result" id="result" readonly />
+         </div>
+         <div>
+            <p>* Required</p>
+         </div>
+         <div class="itemform">
+            <input type="submit" value="Convert" id="convert" />
+         </div>
+      </form>
+   </main>
+
+   <!-- Footer -->
+   <footer></footer>
+</body>
+
 </html>

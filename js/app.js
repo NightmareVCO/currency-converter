@@ -29,7 +29,7 @@ const currencies = [
 ];
 
 // Functions
-function convertCurrency(amount,currencyID) {
+function convertCurrency(amount, currencyID) {
    const currency = currencies.find(currency => currency.id === currencyID);
 
    if (currency)
@@ -38,6 +38,12 @@ function convertCurrency(amount,currencyID) {
    return null;
 }
 
+/**
+ * Retrieves the symbol of a currency based on its ID.
+ *
+ * @param {string} currencyID - The ID of the currency to retrieve the symbol for.
+ * @return {string|null} The symbol of the currency, or null if the currency was not found.
+ */
 function getSymbol(currencyID) {
    const currency = currencies.find(currency => currency.id === currencyID);
 
@@ -51,8 +57,7 @@ function getSymbol(currencyID) {
 // Event Listeners functions
 function checkForm(event) {
 
-   if (currencyInput.value == "")
-   {
+   if (currencyInput.value == "") {
       currencyInput.focus();
       event.preventDefault();
       error.innerText = "Please select the currency";
@@ -66,15 +71,25 @@ function checkForm(event) {
    return true;
 }
 
+/**
+ * Converts the input currency amount to the desired currency and updates the result value.
+ *
+ * @param {Event} event - The event object.
+ * @return {boolean} Returns true if the conversion is successful.
+ */
 function convert(event) {
    event.preventDefault();
-   result.value = convertCurrency(amountInput.value,currencyInput.value) + getSymbol(currencyInput.value);
+   result.value = convertCurrency(amountInput.value, currencyInput.value) + getSymbol(currencyInput.value);
    return true;
 }
 
-
 //Event Initialization
-converterForm.addEventListener("submit",function (event) {
+converterForm.addEventListener("submit", function (event) {
+   if (checkForm(event))
+      convert(event);
+});
+
+converterForm.addEventListener("submit", (event) => {
    if (checkForm(event))
       convert(event);
 });
